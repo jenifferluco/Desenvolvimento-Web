@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="ISO-8859-1">
+	<title>IMC e</title>
+	
+	<script>
+	function calcular_imc(){
+		//Alert ("calculando ....");
+		var p = parseFloat(document.getElementById("Peso").value);
+		var a = parseFloat(document.getElementById("Altura").value);
+		var r = document.getElementById("resultado");
+		
+		r.value = p / Math.pow(a,2);
+	}
+	
+	</script>
+</head>
+<body>
+ 
+<h1>Projeto IMC </h1>
+
+<form>
+
+<label for="">Peso:</label>
+<input type="text" id="Peso"/>
+
+<label for="">Altura:</label>
+<input type="text" id="Altura"/><br><br>
+
+<input type="button" value="calcular" onClick="calcular_imc()"/>
+<br><br>
+
+<span>resultado</span>
+<input type="text" id="resultado"/><br>
+
+
+</form>
+<h4>
+<P>IMC	CLASSIFICAÇÃO	(GRAU)</P>
+<P>MENOR QUE 18,5		Abaixo do Peso	0</P>
+<P>ENTRE 18,5 E 24,9	Normal	0</P>
+<P>ENTRE 25,0 E 29,9	Sobrepeso	I</P>
+<P>ENTRE 30,0 E 39,9	Obesidade	II</P>
+<P>MAIOR QUE 40,0		Obesidade Grave	III</P>
+</h4>
+
+</body>
+</html>
+
