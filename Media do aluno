@@ -1,0 +1,46 @@
+# Desenvolvimento-Web
+Eclipse e JDK 
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="ISO-8859-1">
+	<title>Media do Aluno e</title>
+	
+	<script>
+	function calcular_media(){
+		//Alert ("calculando ....");
+		var n1 = parseFloat(document.getElementById("Nota 1").value);
+		var n2 = parseFloat(document.getElementById("Nota 2").value);
+		var r = document.getElementById("resultado");
+		
+		r.value = (n1+n2) / 2
+	}
+	
+	</script>
+</head>
+<body>
+ 
+<h1>Projeto IMC </h1>
+
+<form>
+
+<label for="">Nota 1:</label>
+<input type="text" id="Nota 1"/>
+
+<label for="">Nota 2:</label>
+<input type="text" id="Nota 2"/><br><br>
+
+<input type="button" value="calcular" onClick="calcular_media()"/>
+<br><br>
+
+<span>resultado</span>
+<input type="text" id="resultado"/><br>
+
+
+</form>
+
+
+</body>
+</html>
