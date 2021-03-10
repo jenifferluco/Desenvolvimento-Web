@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<script >
+function calcular(){
+var a = parseFloat (document.getElementById("a").value);
+var b = parseFloat (document.getElementById("b").value);
+var c = parseFloat (document.getElementById("c").value);
+
+var delta = Math.pow(b,2) - 4 * a * c;
+
+var x1 = (-b + Math.sqrt(delta)) / (2 * a);
+
+var x1 = (-b - Math.sqrt(delta)) /( 2 * a);
+
+var spanX1 = document.getElementById("x1");
+var spanX2 = document.getElementById("x2");
+
+spanX1.innerHTML= X1;
+spanX2.innerHTML= X2;
+
+
+
+}
+
+
+
+</script>
+<body>
+<h2> Calculando Baskara</h2>
+<form>
+<label for="a"> valor de A</label>
+<input type="text" id="a" placeholder="informe o valor de A"><br>
+
+<label for="b">valor de  B</label>
+<input type="text" id="b" placeholder="informe o valor de B"><br>
+
+<label for="c">valor de  C</label>
+<input type="text" id="c" placeholder="informe o valor de C">
+
+<input type="button" value="calcular" onClick="calcular()"/>
+
+<span>Valor de X1 = </span> <span id="x1"></span><br> <br>
+
+<span>Valor de X2 = </span> <span id="x2"></span>
+</form>
+
+
+
+</body>
+</html>
