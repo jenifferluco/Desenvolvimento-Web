@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>conversão de Moeda</title>
+</head>
+<body>
+
+	<form>
+		<div id="div1">
+			<h1>Conversão de moeda </h1>
+			
+			<!--OPÇÕES DE MOEDAS PARA CONVERTER-->
+			<div id="div2">
+				<b><label id="text1">Converter para: </label></b><br />
+				<select id="opções">
+					<option></option>
+					<option>Dólar Americano</option>
+					<option>euro</option>
+											
+				</select><br />
+			</div>
+			
+			<!--ENTRADA DO VALOR A SER CONVERTIDO-->
+			<div id="div3">
+				<b><label>Valor a ser convertido:</label></b><br />		
+				<input type="text" id="text2" />
+			</div>
+			
+			<!--botões CONVERTER E RESETAR-->
+			<input type="button" value="Converter" id="btn1" onClick="conversao()" />
+			<input type="reset" value="Limpar" id="btn2">
+			
+			<!--RESULTADO QUE SERÁ MOSTRADO NA TELA-->
+			<div id="div4">
+				<label id="resultado">Resultado:</label><br />
+				<span id="valorFinal"></span>
+			</div><br />
+			
+			<!--OBSERVAÇÕES-->
+			<div id="div5">
+				<ul>
+				<li>Moeda</li>				
+				<li>Data da cotação: 01/03/2021</li>
+			</ul>
+			</div>
+		</div>	
+	</form>	
+	
+	<script>		
+		var valor;			
+			
+		function conversao(){
+		var dolarAmericano = 5.64;
+		var euro = 6.79;
+				
+		valor = parseFloat(document.getElementById("text2").value);			
+			
+		if(document.getElementById("opções").value="Dólar Americano"){
+		document.getElementById("valorFinal").innerHTML = (valor/dolarAmericano).toFixed(2);			
+				
+			}
+			
+		if(document.getElementById("opções").value="euro"){
+		document.getElementById("valorFinal").innerHTML = (valor/euro).toFixed(2);			
+										
+			}
+					
+		}	
+		
+	</script>
+	
+</body>
+</html>
